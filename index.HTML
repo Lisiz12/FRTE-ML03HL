@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1100px;
+            height: 1000px;
+            padding: 20px;
+            align-self: center;
+        }
+        
+        h1 {
+            font-size: 3.3rem;
+        }
+        
+        t1 {
+            font-size: 1.8rem;
+        }
+        
+        code {
+            font-size: 120%;
+        }
+        
+        div {
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+        
+        .title {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            border: black;
+            border-style: solid;
+            border-radius: 15px;
+            border-width: medium;
+            background-color: rgb(41, 155, 221);
+            padding: 5px 5px;
+            font-size: 17px;
+            width: 2.5cm;
+            height: 1.2cm;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .btn:hover {
+            background-color: rgb(37, 134, 190);
+        }
+        
+        .btns {
+            border: black;
+            border-style: solid;
+            border-radius: 15px;
+            border-width: medium;
+            background-color: rgb(41, 155, 221);
+            padding: 5px 5px;
+            font-size: 17px;
+            width: 2.8cm;
+            height: 1.5cm;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .btns:hover {
+            background-color: rgb(37, 134, 190);
+        }
+        
+        .helpbtn {
+            border: grey;
+            border-style: solid;
+            border-radius: 50px;
+            border-width: thin;
+            width: 0.5cm;
+            height: 0.5cm;
+            text-align: left;
+        }
+        
+        body.scroll {
+            overflow-x: auto;
+            overflow-y: scroll;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: Arial, Helvetica, sans-serif;
+            align-content: center;
+        }
+        
+        .progressBar {
+            height: 14px;
+            background-color: rgb(67, 167, 224);
+            text-align: center;
+            line-height: 12px;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+        }
+        
+        input {
+            margin-bottom: 7px;
+            height: 16px;
+        }
+        
+        select {
+            height: 21px;
+            width: 90px;
+        }
+        
+        footer {
+            width: 680px;
+            margin-top: 10px;
+            align-items: center;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        span {
+            font-size: 14px;
+            background-color: white;
+            margin-top: 5px;
+            position: absolute;
+            padding: 3px;
+            border-style: solid;
+            border-width: thin;
+            border-radius: 10px;
+            border-color: grey;
+            text-align: left;
+            width: 300px;
+            font-stretch: expanded;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.9.0/dist/pptxgen.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script type="module" , src="./DataCollector.js" defer></script>
+    <script type="module" , src="./Graphs.js" defer></script>
+    <script type="module" , src="./data pipelines/CSV.js" defer></script>
+    <script type="module" , src="./Report.js" defer></script>
+    <script type="module" , src="./Initiation.js" defer></script>
+
+</head>
+
+<body class="scroll">
+    <main class="maincontent" , style="align-self: center; justify-content: left; width: 700px; margin-left: 20px">
+        <figrue class="logo" ,style="margin-bottom:10px">
+            <img src="./images/logo.jpg" , alt="Logo" , width=160px, height=100px>
+        </figrue>
+        <h1 class="title"> Report generator prototype</h1>
+        <t1 class="sub-header"> </t1>
+        <div class="subsection"> </div>
+    </main>
+
+</body>
+<footer>
+    <ul id="wrapper" , class="wrapper" , style="border-style:dotted; border: thin; border-color: grey; background-color: rgba(67, 166, 224, 0.26); padding: 0px; border-radius: 10px;margin:0px; height:16px">
+        <div id="myBar" class="progressBar"> </div>
+        <div id="barText" , class="progressBarText" , style="align-self: center; margin-top: 2px; margin-bottom: 10px"> PROGRESS </div>
+    </ul>
+</footer>
+
+</html>

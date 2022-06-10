@@ -1,0 +1,11 @@
+{
+  "name": "template-editor-v.2",
+  "version": "1.0.0",
+  "description": "Report generator post graphic design update",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lisa Liljefors",
+  "license": "ISC"
+}
